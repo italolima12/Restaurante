@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #f2e9df;
+    background:
+        linear-gradient(rgba(7, 7, 10, 0.72), rgba(7, 7, 10, 0.72)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat,
+        radial-gradient(circle at top right, rgba(255, 187, 92, 0.16), transparent 30%),
+        radial-gradient(circle at 10% 20%, rgba(255, 92, 92, 0.12), transparent 30%),
+        radial-gradient(circle at 90% 85%, rgba(34, 197, 94, 0.14), transparent 35%),
+        linear-gradient(135deg, #11131a 0%, #17141f 45%, #13111a 100%);
+}
+
+.interface {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-login {
+    width: min(460px, 100%);
+    padding: 34px 32px;
+    border-radius: 24px;
+    background: rgba(21, 24, 34, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(10px);
+}
+
+.tagline {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #f0b56f;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    margin-bottom: 8px;
+    color: #fff5ea;
+}
+
+.descricao {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #d8c7b5;
+}
+
+.photo-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.foto {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 78px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(36, 22, 12, 0.28);
+}
+
+.foto-1 {
+    background-image: linear-gradient(rgba(17, 11, 5, 0.15), rgba(17, 11, 5, 0.4)), url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80");
+}
+
+.foto-2 {
+    background-image: linear-gradient(rgba(17, 11, 5, 0.2), rgba(17, 11, 5, 0.42)), url("https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=900&q=80");
+}
+
+.foto-3 {
+    background-image: linear-gradient(rgba(17, 11, 5, 0.2), rgba(17, 11, 5, 0.42)), url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80");
+    filter: saturate(1.2);
+}
+
+.foto-legenda {
+    position: absolute;
+    left: 8px;
+    bottom: 7px;
+    color: #fff;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+.lista li {
+    width: 100%;
+    min-height: 64px;
+    border-radius: 14px;
+    border: 1px solid #2e3242;
+    background: linear-gradient(180deg, #262b3a, #1f2330);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.lista li a {
+    width: 100%;
+    text-decoration: none;
+    color: #f8ede2;
+    text-align: center;
+    padding: 18px;
+}
+
+.lista li:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+
+.red:hover {
+    background: linear-gradient(90deg, #6b2a2a, #8d3a3a);
+}
+
+.orange:hover {
+    background: linear-gradient(90deg, #6b4727, #926238);
+}
+
+.green:hover {
+    background: linear-gradient(90deg, #1f4a2f, #2b6940);
+}
+
+@media (max-width: 520px) {
+
+    body {
+        padding: 12px;
+        align-items: flex-start;
+    }
+
+    .card-login {
+        width: 100%;
+        padding: 22px 16px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .descricao {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .photo-strip {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .foto {
+        height: 90px;
+    }
+
+    .lista li {
+        min-height: 55px;
+        font-size: 1rem;
+    }
+
+    .lista li a {
+        padding: 14px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .card-login { padding: 20px; }
+    .photo-strip { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 360px) {
+    .foto { height: 80px; }
+}

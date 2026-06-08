@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #f2e9df;
+    background:
+        linear-gradient(rgba(7, 7, 10, 0.72), rgba(7, 7, 10, 0.72)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat,
+        radial-gradient(circle at top right, rgba(255, 187, 92, 0.16), transparent 30%),
+        radial-gradient(circle at 10% 20%, rgba(255, 92, 92, 0.12), transparent 30%),
+        radial-gradient(circle at 90% 85%, rgba(34, 197, 94, 0.14), transparent 35%),
+        linear-gradient(135deg, #11131a 0%, #17141f 45%, #13111a 100%);
+}
+.interface {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-garcom {
+    width: min(460px, 100%);
+    padding: 34px 32px;
+    border-radius: 24px;
+    background: rgba(21, 24, 34, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(10px);
+}
+
+.tagline {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #f0b56f;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    margin-bottom: 8px;
+    color: #fff5ea;
+}
+
+.photo-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.foto {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 78px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(36, 22, 12, 0.28);
+}
+
+.foto-1 {
+    background-image: linear-gradient(rgba(17, 11, 5, 0.15), rgba(17, 11, 5, 0.4)), url("fotos/garcom.jpg");
+}
+
+.foto-2 {
+    background-image: linear-gradient(rgba(17, 11, 5, 0.2), rgba(17, 11, 5, 0.42)), url("fotos/auxilio.jpg");
+}
+
+.foto-3 {
+    background-image: linear-gradient(rgba(17, 11, 5, 0.2), rgba(17, 11, 5, 0.42)), url("fotos/rato.webp");
+}
+
+.foto-legenda {
+    position: absolute;
+    left: 8px;
+    bottom: 7px;
+    color: #fff;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    margin: 20px;
+    color: white;
+}
+
+form input{
+ width: 100%;
+    min-height: 64px;
+    border-radius: 14px;
+    border: 1px solid #2e3242;
+    background: linear-gradient(180deg, #262b3a, #1f2330);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 4vw, 1.15rem);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    color: white
+}   
+
+.botao-garcom input{
+    background: linear-gradient(180deg, #262b3a, #1f2330);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    font-size: 1.15rem;
+    border: 1px solid #2e3242;
+    width: 100px;
+    max-width: 220px;
+}
+
+.botao-garcom input:hover{
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #6b2a2a, #8d3a3a);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 900px) {
+    .card-garcom {
+        width: min(90vw, 460px);
+        padding: 24px;
+    }
+
+    .photo-strip {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    form {
+        margin: 12px;
+    }
+
+    .botao-garcom input {
+        width: 140px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-garcom {
+        width: 100%;
+        padding: 16px;
+        border-radius: 16px;
+        box-shadow: none;
+    }
+
+    .photo-strip {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .foto {
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: 10px;
+    }
+
+    form input {
+        min-height: 56px;
+        font-size: 1rem;
+    }
+
+    .botao-garcom input {
+        width: 100%;
+        max-width: none;
+    }
+}
+
