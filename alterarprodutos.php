@@ -3,7 +3,7 @@ class Produto
 {
     private string $id;
     private string $nome;
-    private float $preco;
+    private float $preco; 
     private string $imagem;
     private string $descricao;
     public function __construct(string $id, string $nome, float $preco, string $imagem, string $descricao = '')
